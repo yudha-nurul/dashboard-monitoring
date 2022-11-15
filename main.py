@@ -3,6 +3,7 @@ Aplikasi deteksi gempa terkini
 MODULARISASI DENGAN FUNCTION
 """
 
+
 def ekstraksi_data():
     """
         Gempabumi Terkini
@@ -15,14 +16,32 @@ def ekstraksi_data():
     Dirasakan: Dirasakan (Skala MMI): III Nagan Raya, III Benermeriah, I-II Pidie, I-II Lhokseumawe
     :return:
     """
-    pass
+    hasilnya = dict()
+    hasilnya['tanggal'] = '10 November 2022'
+    hasilnya['waktu'] = '12:56:30 WIB'
+    hasilnya['magnitudo'] = '4.9'
+    hasilnya['kedalaman'] = '10 km'
+    hasilnya['lokasi'] = {'LU': 4.28, 'BT': 96.72}
+    hasilnya['pusat gempa'] = 'Pusat gempa berada di darat 40 km BaratDaya Takengon'
+    hasilnya['dirasakan'] = 'Dirasakan (Skala MMI): III Nagan Raya, III Benermeriah, I-II Pidie, I-II Lhokseumawe'
 
-def tampilkan_data(result):
-    pass
+    return hasilnya
+
+
+def tampilkan_data(hasilnya):
+    print('gempa terakhir berdasarkan BMKG:')
+    print(f"tanggal {hasilnya['tanggal']}")
+    print(f"waktu {hasilnya['waktu']}")
+    print(f"magnitudo {hasilnya['magnitudo']}")
+    print(f"kedalaman {hasilnya['kedalaman']}")
+    print('lokasi:')
+    print(f"    LU= {hasilnya['lokasi']['LU']}")
+    print(f"    BT= {hasilnya['lokasi']['BT']}")
+    print(hasilnya['pusat gempa'])
+    print(hasilnya['dirasakan'])
+
 
 if __name__ == '__main__':
     print('aplikasi utama')
     result = ekstraksi_data()
     tampilkan_data(result)
-
-
