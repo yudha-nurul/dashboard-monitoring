@@ -11,6 +11,15 @@ def ekstraksi_data():
     Dirasakan: Dirasakan (Skala MMI): III Nagan Raya, III Benermeriah, I-II Pidie, I-II Lhokseumawe
     :return:
     """
+    import requests
+    r = requests.get('https://www.bmkg.go.id/')
+    status = r.status_code
+    print(status)
+
+
+
+
+
     hasilnya = dict()
     hasilnya['tanggal'] = '10 November 2022'
     hasilnya['waktu'] = '12:56:30 WIB'
