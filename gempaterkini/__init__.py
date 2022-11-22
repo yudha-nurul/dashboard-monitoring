@@ -14,12 +14,13 @@ def ekstraksi_data():
     import requests
     r = requests.get('https://www.bmkg.go.id/')
     status = r.status_code
-    #print(status)
+    print(status)
     isi = r.text
-    #print(isi)
+    # print(isi)
 
-
-
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(isi)
+    print(soup.prettify())
 
     hasilnya = dict()
     hasilnya['tanggal'] = '10 November 2022'
