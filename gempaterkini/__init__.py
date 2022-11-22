@@ -14,8 +14,9 @@ def ekstraksi_data():
     import requests
     r = requests.get('https://www.bmkg.go.id/')
     status = r.status_code
-    print(status)
-
+    #print(status)
+    isi = r.text
+    #print(isi)
 
 
 
