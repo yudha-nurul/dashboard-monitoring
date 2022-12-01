@@ -66,6 +66,7 @@ def ekstraksi_data():
 
 
 def tampilkan_data(hasilnya):
+    print('~' *40)
     print('gempa terakhir berdasarkan BMKG:')
     print(f"tanggal {hasilnya['tanggal']}")
     print(f"waktu {hasilnya['waktu']}")
@@ -76,3 +77,5 @@ def tampilkan_data(hasilnya):
     print(f"    BT= {hasilnya['lokasi']['BT']}")
     print(hasilnya['pusat gempa'])
     print(hasilnya['dirasakan'])
+    print('~' * 40)
+
