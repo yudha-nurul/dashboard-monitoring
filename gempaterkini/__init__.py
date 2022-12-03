@@ -18,7 +18,7 @@ def ekstraksi_data():
     try:
         content = requests.get('https://www.bmkg.go.id/')
     except Exception:
-        print('terjadi kesalahan pada server')
+        print('tidak dapat mengekstraks data')
         return None
 
     # print(content.status_code)
