@@ -17,6 +17,8 @@ def ekstraksi_data():
     except Exception:
         print('the content cannot displayed')
         return None
+    soup = BeautifulSoup(content, 'html.parser')
+    print(soup.text)
 
 
 def tampilkan_data():
