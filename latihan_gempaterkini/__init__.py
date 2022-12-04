@@ -15,13 +15,11 @@ def ekstraksi_data():
     try:
         content = requests.get('https://www.bmkg.go.id/')
     except Exception:
+        print('the content cannot displayed')
         return None
-        print('web content cannot displayed')
-
 
 
 def tampilkan_data():
-    print('-' * 40)
     print('gempa terakhir berdasarkan BMKG:')
     print(f"tanggal {hasilnya['tanggal']}")
     print(f"waktu {hasilnya['waktu']}")
@@ -32,4 +30,3 @@ def tampilkan_data():
     print(f"    BT= {hasilnya['lokasi']['BT']}")
     print(hasilnya['pusat gempa'])
     print(hasilnya['dirasakan'])
-    print('-' * 40)
